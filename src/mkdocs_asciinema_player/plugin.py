@@ -299,7 +299,7 @@ class AsciinemaPlayerPlugin(BasePlugin[AsciinemaPlayerConfig]):
         files.append(terminal_player_css_file_obj)
         files.append(asciinema_css_file_obj)
         files.append(asciinema_js_file_obj)
-        shutil.copytree(assets_src_dir + "/icons", icons_dest_dir)
+        shutil.copytree(assets_src_dir + "/icons", icons_dest_dir, dirs_exist_ok=True)
 
         return files
 
